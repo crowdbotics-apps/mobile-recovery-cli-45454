@@ -14,6 +14,15 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return mobilerecoverycliAPI.post(`/api/v1/signup/`, payload)
 }
+function modules_payments_get_payments_history_retrieve(payload) {
+  return mobilerecoverycliAPI.get(`/modules/payments/get_payments_history/`)
+}
+function modules_payments_get_payments_methods_retrieve(payload) {
+  return mobilerecoverycliAPI.get(`/modules/payments/get_payments_methods/`)
+}
+function modules_payments_payment_sheet_create(payload) {
+  return mobilerecoverycliAPI.post(`/modules/payments/payment_sheet/`)
+}
 function rest_auth_login_create(payload) {
   return mobilerecoverycliAPI.post(`/rest-auth/login/`, payload)
 }
@@ -60,6 +69,9 @@ export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
   api_v1_signup_create,
+  modules_payments_get_payments_history_retrieve,
+  modules_payments_get_payments_methods_retrieve,
+  modules_payments_payment_sheet_create,
   rest_auth_login_create,
   rest_auth_logout_create,
   rest_auth_password_change_create,
