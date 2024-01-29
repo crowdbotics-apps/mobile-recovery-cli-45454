@@ -18,6 +18,7 @@
     "@modules/chat": "file:./modules/chat/",
     "@modules/payments": "file:./modules/payments",
     "@modules/privacy-policy-webview": "file:./modules/privacy-policy-webview/",
+    "@modules/terms-and-conditions": "file:./modules/terms-and-conditions",
     "@modules/terms-and-conditions-webview": "file:./modules/terms-and-conditions-webview/",
     "@react-native-community/checkbox": "0.5.10",
     "@react-native-masked-view/masked-view": "^0.2.9",
