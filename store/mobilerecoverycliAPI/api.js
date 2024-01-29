@@ -23,6 +23,34 @@ function modules_payments_get_payments_methods_retrieve(payload) {
 function modules_payments_payment_sheet_create(payload) {
   return mobilerecoverycliAPI.post(`/modules/payments/payment_sheet/`)
 }
+function modules_terms_and_conditions_list(payload) {
+  return mobilerecoverycliAPI.get(`/modules/terms-and-conditions/`)
+}
+function modules_terms_and_conditions_create(payload) {
+  return mobilerecoverycliAPI.post(`/modules/terms-and-conditions/`, payload)
+}
+function modules_terms_and_conditions_retrieve(payload) {
+  return mobilerecoverycliAPI.get(
+    `/modules/terms-and-conditions/${payload.id}/`
+  )
+}
+function modules_terms_and_conditions_update(payload) {
+  return mobilerecoverycliAPI.put(
+    `/modules/terms-and-conditions/${payload.id}/`,
+    payload
+  )
+}
+function modules_terms_and_conditions_partial_update(payload) {
+  return mobilerecoverycliAPI.patch(
+    `/modules/terms-and-conditions/${payload.id}/`,
+    payload
+  )
+}
+function modules_terms_and_conditions_destroy(payload) {
+  return mobilerecoverycliAPI.delete(
+    `/modules/terms-and-conditions/${payload.id}/`
+  )
+}
 function rest_auth_login_create(payload) {
   return mobilerecoverycliAPI.post(`/rest-auth/login/`, payload)
 }
@@ -72,6 +100,12 @@ export const apiService = {
   modules_payments_get_payments_history_retrieve,
   modules_payments_get_payments_methods_retrieve,
   modules_payments_payment_sheet_create,
+  modules_terms_and_conditions_list,
+  modules_terms_and_conditions_create,
+  modules_terms_and_conditions_retrieve,
+  modules_terms_and_conditions_update,
+  modules_terms_and_conditions_partial_update,
+  modules_terms_and_conditions_destroy,
   rest_auth_login_create,
   rest_auth_logout_create,
   rest_auth_password_change_create,
