@@ -76,7 +76,7 @@ export function getByValue(arr, value) {
 }
 
 export const getUrl = async (uri, fileName) => {
-  const destPath = `${RNFS.DocumentDirectoryPath}/${fileName}`;
+  const destPath = `${RNFS.TemporaryDirectoryPath}/${fileName}`;
   await RNFS.copyFile(uri, destPath);
   await RNFS.stat(destPath);
   return destPath;
